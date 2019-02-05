@@ -1,0 +1,127 @@
+* {
+    font-family: 'CUTE ANIMAL', fancy;
+    box-sizing: border-box;
+    background-color: green;
+    max-height: 100vh;
+    color: rgb(210, 129, 52);
+  }
+
+h1 {
+    text-align: center;
+}
+
+.wrapper {
+    /* display: inline-block;
+    flex-direction: row; */
+    background-color: green;
+    /* justify-content: flex-start; */
+    /* height: 100vh;
+    width: 490px; */
+    padding: 10px 10px;
+    margin: 10px;
+    border: black 8px;
+    display: grid;
+    /* flex-direction: column; */
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr; 
+    grid-gap: 20px;
+    /* grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr; */
+    grid-template-areas:
+        "main attributes";
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        "row1"
+        "row2"
+        "row3"
+        "row4";
+    grid-area: main;
+    align-items: center;
+}
+
+.row1 {
+    grid-area: row1;
+    padding-left: 20px;
+}
+
+.row2 {
+    grid-area: row2;
+    padding-left: 20px;
+}
+
+.row3 {
+    grid-area: row3;
+    padding-left: 20px;
+}
+
+.row4 {
+    grid-area: row4;
+    padding-left: 20px;
+}
+
+
+#attFloppyEar {
+    background-color: white;
+}
+
+.attributes {
+    display: grid;
+    grid-area: attributes;  
+    /* border: 8px solid black;
+    margin-block-end: auto; */
+    /* height: 100vh;
+    width: 90px; */
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+        "column1 column2";    
+}
+
+.column1  {
+    grid-area: column1;
+}
+
+.column2 {
+    grid-area: column2;
+}
+
+.animalPics {
+    width: 125px;
+    height: 125px;
+    border: solid black 5px;
+    border-radius: 10px;
+    margin: 5px 5px;
+
+}
+
+.animalTraits {
+    margin: 5px;
+    border: solid black 3px;
+    border-radius: 360px;
+}
+
+footer {
+    text-align: right;
+    padding-top: 20px;
+}
+
+@media only screen and (min-width: 800px) {
+* {
+    max-height: 800px;
+}
+
+    .animalPics {
+        width: 150px;
+        height: 150px;
+    }
+
+    footer {
+        padding-top: 50px;
+    }
+
+}
