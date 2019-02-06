@@ -9,23 +9,38 @@
 
 
 /*----- event listeners -----*/
+var x = document.getElementById("question");
+// var y = document.getElementById("question");
 
+function playAudio(){
+    x.play()
+}
+// function playAudio(){
+//     y.play()
+// }
 
+// $btn.addEventListener('mouseover', function {
+//     $audio.getElementById("scalesAudio").play
+// });
+
+// $(".btnHover").click(function(){
+//     console.log("This button works")
+// });
 /*----- functions -----*/
 
-make descriptions for each animal for the computer to be able to compare with the attribute that is selected by 
-the player
+// make descriptions for each animal for the computer to be able to compare with the attribute that is selected by 
+// the player
 
-set up random computer animal selection
+// set up random computer animal selection
 
-create hover events for attribute selections with audio that describes the Image
+// create hover events for attribute selections with audio that describes the Image
 
-create click events for the attributes that are selected 
+// create click events for the attributes that are selected 
 
-computer will respond with a yes/no answer if the secret animal has the selected attributes
+// computer will respond with a yes/no answer if the secret animal has the selected attributes
 
-create click events to "hide" the animal images that are selected
+// create click events to "hide" the animal images that are selected
 
-once one animal image is remaining, computer will compare with secret animal. 
+// once one animal image is remaining, computer will compare with secret animal. 
 
-If same, computer will congratulate winner. If not, computer will "show" correct image and tell player to play again.
+// If same, computer will congratulate winner. If not, computer will "show" correct image and tell player to play again.

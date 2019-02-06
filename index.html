@@ -6,8 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Guess Who: Animals</title>
     <link href="https://www.dafont.com/cute-animal.font">
-    <!-- <link href="https://fonts.googleapis.com/css?family=Concert+One" rel="stylesheet"> -->
     <link href="css/main.css" rel="stylesheet" type="text/css">
+    <script src="http://code.jquery.com/jquery-3.3.1.js" 
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
     <script defer src="js/main.js"></script>
 </head>
 
@@ -40,24 +42,44 @@
 
     <aside class="attributes">
         <div class="column1">
-            <img class ="animalTraits" id="attFloppyEar" src="https://i.imgur.com/WLHSmCV.png">
-            <img class ="animalTraits" id="attWater" src="https://i.imgur.com/Gsju38m.jpg">
-            <img class ="animalTraits" id="attScales" src="https://i.imgur.com/vULYejO.jpg">
-            <img class ="animalTraits" id="attTeeth" src="https://i.imgur.com/VnNJvBu.jpg">
-            <img class ="animalTraits" id="attFins" src="https://i.imgur.com/nvExflC.png">
-            <img class ="animalTraits" id="attAir" src="https://i.imgur.com/9lz0ugw.jpg">
-            <img class ="animalTraits" id="attTail" src="https://i.imgur.com/Ud5Y9fb.jpg">
+            <img class ="animalTraits" id="attFloppyEar" src="https://i.imgur.com/WLHSmCV.png"
+                onmouseover="playAudio()">
+            <img class ="animalTraits" id="attWater" src="https://i.imgur.com/Gsju38m.jpg"
+                onmouseover="playAudio()">
+            <img class ="animalTraits" id="attScales" src="https://i.imgur.com/vULYejO.jpg"
+                onmouseover="playAudio()">
+            <img class ="animalTraits" id="attTeeth" src="https://i.imgur.com/VnNJvBu.jpg"
+                onmouseover="playAudio()">
+            <img class ="animalTraits" id="attFins" src="https://i.imgur.com/nvExflC.png"
+                onmouseover="playAudio()">
+            <img class ="animalTraits" id="attAir" src="https://i.imgur.com/9lz0ugw.jpg"
+                onmouseover="playAudio()">
+            <img class ="animalTraits" id="attTail" src="https://i.imgur.com/Ud5Y9fb.jpg"
+                onmouseover="playAudio()">
         </div>
         <div class="column2">
-            <img class ="animalTraits" id="attFur" src="https://i.imgur.com/uH8nZ3d.png">
-            <img class ="animalTraits" id="attBeak" src="https://i.imgur.com/Lxi7d8P.jpg">
-            <img class ="animalTraits" id="attTwoLegs" src="https://i.imgur.com/ZczdIEQ.jpg">
-            <img class ="animalTraits" id="attFeathers" src="https://i.imgur.com/Bvn61EC.jpg">
-            <img class ="animalTraits" id="attSpots" src="https://i.imgur.com/IRm1mbT.png">
-            <img class ="animalTraits" id="attNose" src="https://i.imgur.com/Aa4EmyE.jpg">
-            <img class ="animalTraits" id="attEggs" src="https://i.imgur.com/sGLgsEM.jpg">
+            <img class ="animalTraits" id="attFur" src="https://i.imgur.com/uH8nZ3d.png"
+                onmouseover="playAudio()">
+            <img class ="animalTraits" id="attBeak" src="https://i.imgur.com/Lxi7d8P.jpg"
+                onmouseover="playAudio()">
+            <img class ="animalTraits" id="attTwoLegs" src="https://i.imgur.com/ZczdIEQ.jpg"
+                onmouseover="playAudio()">
+            <img class ="animalTraits" id="attFeathers" src="https://i.imgur.com/Bvn61EC.jpg"
+                onmouseover="playAudio()">
+            <img class ="animalTraits" id="attSpots" src="https://i.imgur.com/IRm1mbT.png"
+                onmouseover="playAudio()">
+            <img class ="animalTraits" id="attNose" src="https://i.imgur.com/Aa4EmyE.jpg"
+                onmouseover="playAudio()">
+            <img class ="animalTraits" id="attEggs" src="https://i.imgur.com/sGLgsEM.jpg"
+                onmouseover="playAudio()">
         </div>
     </aside>
+    <audio id="question">
+        <!-- <source src="cheerm.mp3" type="audio/mp3" />  -->
+        <source id="scales" src="audio/beak.m4a" type="audio/mp4" />
+        <!-- <source src="audio/no-m.m4a" type="audio/mp4" />
+        <source src="audio/yes-m.m4a" type="audio/mp4" /> -->
+    </audio>
 </div>
 <footer>Michelle McGuire 2019</footer>
 </body>
