@@ -28,16 +28,27 @@ function playAudio(){
 // });
 /*----- functions -----*/
 
-// make descriptions for each animal for the computer to be able to compare with the attribute that is selected by 
+var answers = ['dalmation', 'yellowBird', 'sheltie', 'shark', 'rainbowFish', 'panther',
+    'lion', 'leopard', 'husky', 'greenBird', 'flamingo', 'clownFish'];
+
+    //secret animal = solution
+var solution = answers[Math.floor(Math.random() * answers.length)];
+console.log(solution);
+
+
+
+
+
+// make descriptions for each animal for the computer to be able to compare with the clue that is selected by 
 // the player
 
 // set up random computer animal selection
 
-// create hover events for attribute selections with audio that describes the Image
+// create hover events for clue selections with audio that describes the Image
 
-// create click events for the attributes that are selected 
+// create click events for the clues that are selected 
 
-// computer will respond with a yes/no answer if the secret animal has the selected attributes
+// computer will respond with a yes/no answer if the secret animal has the selected clues
 
 // create click events to "hide" the animal images that are selected
 
