@@ -9,6 +9,10 @@
 
 
 /*----- event listeners -----*/
+window.onload=function(){
+    document.getElementById("instructions").play();
+  };
+
 var x = document.getElementById("question");
 // var y = document.getElementById("question");
 
@@ -27,6 +31,17 @@ function playAudio(){
 //     console.log("This button works")
 // });
 /*----- functions -----*/
+
+var floppyEar = ['dalmation', 'sheltie'];
+var livesInWater = ['shark', 'rainbowFish', 'clownFish'];
+var hasScales = ['rainbowFish'];
+var hasTeeth = ['shark', 'panther'];
+var hasFins = ['shark', 'rainbowFish', 'clownFish'];
+var flies = ['yellowBird', 'greenBird', 'flamingo'];
+var longTail = ['dalmation', 'panther', 'lion', 'leopard', 'husky'];
+var furry = ['dalmation', 'panther', 'lion', 'leopard', 'husky', 'sheltie'];
+var longBeak = ['greenBird', 'flamingo'];
+
 
 var answers = ['dalmation', 'yellowBird', 'sheltie', 'shark', 'rainbowFish', 'panther',
     'lion', 'leopard', 'husky', 'greenBird', 'flamingo', 'clownFish'];
