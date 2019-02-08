@@ -8,9 +8,14 @@
 
 
 /*----- event listeners -----*/
-// window.onload=function() {
-//     document.getElementById("instructions").play();
-//   };
+window.onload=function() {
+    document.getElementById("instructions").play();
+    console.log("instuctions is loaded");
+};
+
+
+
+document.getElementById("reset-btn").addEventListener("click", reload);
 
 var a = document.getElementById("askEars");
 var b = document.getElementById("askWater");
@@ -95,62 +100,6 @@ var hasNose = ['dalmation', 'panther', 'lion', 'leopard', 'husky', 'sheltie', 'f
 var laysEggs = ['shark', 'rainbowFish', 'clownFish', 'yellowBird', 'greenBird', 'flamingo'];
 
 
-
-
-
-// let clue1 = document.getSelection('floppyEar');
-//     clue1.onclick = function() {
-//         if (clue1.floppyEar == solution) {
-//         console.log("yes");
-//     } else {
-//       console.log("bummer");
-//     }
-// };
-// let animal1 = document.getElementById('dalmation');
-// animal1.onclick = function() {
-//     if (animal1.id == solution) {
-//         return (document.getElementById('win').play());
-//       } else {
-//         console.log("bummer");
-//       }
-// };
-
-    // if (answers[''] == floppyEar[0]) {
-    //     for (s = 1; s < floppyEar.length; s++) {
-    //         if (answers['' + s] == floppyEar[s]);
-    //         return ;
-    //     }
-    // };
-
-// let contain = function() {for (var i = 0; i < floppyEar.length; i++) {
-//         for (var j = 0; j < solution.length; j++) {
-//             if (solution[j].some === floppyEar[i].some) {
-                
-
-
-//     if solution.some(v => floppyEar.includes(v));
-// alert('YES!');
-//             }
-//         }
-//     }
-// }
-
-
-
-//1. Finish up being able to fade out all animals on click
-//2. Add sounds to where you need to add the sounds 
-//3. Compare the solution variable to the clues
-//4. Then after all animals have been faded out, announce bummer or hooray 
-
-
-
-
-
-
-// if the string that is my solution is equal to the string that is the target animal in question
-// then show that the client is right. Else show that the user is wrong. 
-
-
     //fadeout and yes/no audio
 $('#dalmation').on('click', function() {
     if ($('#dalmation').css('opacity') == 0) {
@@ -165,7 +114,7 @@ animal1.onclick = function() {
     if (animal1.id == solution) {
         return (document.getElementById('win').play());
       } else {
-        console.log("bummer");
+        (document.getElementById('notIt').play());
       }
 };
 
@@ -183,7 +132,7 @@ animal2.onclick = function() {
     if (animal2.id == solution) {
         return (document.getElementById('win').play());
       } else {
-        console.log("bummer");
+        return (document.getElementById('notIt').play());
       }
 }
 $('#sheltie').on('click', function() {
@@ -200,7 +149,7 @@ animal3.onclick = function() {
     if (animal3.id == solution) {
         return (document.getElementById('win').play());
       } else {
-        console.log("bummer");
+        return (document.getElementById('notIt').play());
       }
 }
 $('#shark').on('click', function() {
@@ -217,7 +166,7 @@ animal4.onclick = function() {
     if (animal4.id == solution) {
         return (document.getElementById('win').play());
       } else {
-        console.log("bummer");
+        return (document.getElementById('notIt').play());
       }
 }
 $('#rainbowFish').on('click', function() {
@@ -234,7 +183,7 @@ animal5.onclick = function() {
     if (animal5.id == solution) {
         return (document.getElementById('win').play());
       } else {
-        console.log("bummer");
+        return (document.getElementById('notIt').play());
       }
 }
 $('#panther').on('click', function() {
@@ -251,7 +200,7 @@ animal6.onclick = function() {
     if (animal6.id == solution) {
         return (document.getElementById('win').play());
       } else {
-        console.log("bummer");
+        return (document.getElementById('notIt').play());
       }
 }
 $('#lion').on('click', function() {
@@ -267,7 +216,7 @@ animal7.onclick = function() {
     if (animal7.id == solution) {
         return (document.getElementById('win').play());
       } else {
-        console.log("bummer");
+        return (document.getElementById('notIt').play());
       }
 }
 $('#leopard').on('click', function() {
@@ -284,7 +233,7 @@ animal8.onclick = function() {
     if (animal8.id == solution) {
         return (document.getElementById('win').play());
       } else {
-        console.log("bummer");
+        return (document.getElementById('notIt').play());
       }
 }
 $('#husky').on('click', function() {
@@ -300,7 +249,7 @@ animal9.onclick = function() {
     if (animal9.id == solution) {
         return (document.getElementById('win').play());
       } else {
-        console.log("bummer");
+        return (document.getElementById('notIt').play());
       }
 }
 $('#greenBird').on('click', function() {
@@ -317,7 +266,7 @@ animal10.onclick = function() {
     if (animal10.id == solution) {
         return (document.getElementById('win').play());
       } else {
-        console.log("bummer");
+        return (document.getElementById('notIt').play());
       }
 }
 $('#flamingo').on('click', function() {
@@ -333,7 +282,7 @@ animal11.onclick = function() {
     if (animal11.id == solution) {
         return (document.getElementById('win').play());
       } else {
-        console.log("bummer");
+        return (document.getElementById('notIt').play());
       }
 }
 $('#clownFish').on('click', function() {
@@ -349,30 +298,6 @@ animal12.onclick = function() {
     if (animal12.id == solution) {
         return (document.getElementById('win').play());
       } else {
-        console.log("bummer");
+        return (document.getElementById('notIt').play());
       }
 }
-
-
-  
-// if the animal.id = solution then say YES YOU ARE RIGHT! ELSE SAY WRONG! 
-
-
-
-
-// make descriptions for each animal for the computer to be able to compare with the clue that is selected by 
-// the player
-
-// set up random computer animal selection
-
-// create hover events for clue selections with audio that describes the Image
-
-// create click events for the clues that are selected 
-
-// computer will respond with a yes/no answer if the secret animal has the selected clues
-
-// create click events to "hide" the animal images that are selected
-
-// once one animal image is remaining, computer will compare with secret animal. 
-
-// If same, computer will congratulate winner. If not, computer will "show" correct image and tell player to play again.

@@ -11,15 +11,20 @@
         integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
         crossorigin="anonymous"></script>
     <script defer src="js/main.js"></script>
+    <audio id="instructions" src="audio/instructions.m4a" type="audio/mp4"></audio>
 </head>
 
-<body>
-    <h1>Guess Who: Animals</h1>
+<body onload="instructions()">
+    <div class="header">
+        <h1>Guess Who: Animals</h1>
+        <button id="reset-btn">Reset Game!</button>
+    </div>
 <div class="wrapper">   
     <audio src="audio/instructions.m4a" id="instructions" type="audio/mp4"></audio>
     <audio src="audio/no.m4a" id="no" type="audio/mp4'"></audio>
     <audio src="audio/yes.m4a" id="yes" type="audio/mp4"></audio>
     <audio src="audio/hooray.m4a" id="win" type="audio/mp4"></audio>
+    <audio src="audio/notIt.m4a" id="notIt" type="audio/mp4"></audio>
     <audio src="audio/lose.m4a" id="lose" type="audio/mp4"></audio>
     <main class="main">
         <div class="row1">

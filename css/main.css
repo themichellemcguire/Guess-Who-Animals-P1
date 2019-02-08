@@ -5,8 +5,15 @@
     max-height: 100vh;
     color: rgb(210, 129, 52);
   }
+.header {
+    text-align: center;
+}
 
 h1 {
+    text-align: center;
+}
+
+#reset-btn {
     text-align: center;
 }
 
