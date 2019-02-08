@@ -13,7 +13,9 @@ window.onload=function() {
     console.log("instuctions is loaded");
 };
 
-
+function instructions(){
+    document.getElementById("instructions").play();
+}
 
 document.getElementById("reset-btn").addEventListener("click", reload);
 
@@ -31,6 +33,70 @@ var k = document.getElementById("askFeathers");
 var l = document.getElementById("askSpots");
 var m = document.getElementById("askNose");
 var n = document.getElementById("askEggs");
+
+var animalsObj = {
+    FloppyEar: ['dalmation', 'sheltie'],
+    Water: ['shark', 'rainbowFish', 'clownFish'],
+    Scales: ['rainbowFish'],
+    Teeth: ['shark', 'panther'],
+    Fins: ['shark', 'rainbowFish', 'clownFish'],
+    Air: ['yellowBird', 'greenBird', 'flamingo'],
+    Tail: ['dalmation', 'panther', 'lion', 'leopard', 'husky'],
+    Fur: ['dalmation', 'panther', 'lion', 'leopard', 'husky', 'sheltie'],
+    Beak: ['greenBird', 'flamingo'],
+    TwoLegs: ['yellowBird', 'greenBird', 'flamingo'],
+    Feathers: ['yellowBird', 'greenBird', 'flamingo'],
+    Spots: ['dalmation', 'leopard'],
+    Nose: ['dalmation', 'panther', 'lion', 'leopard', 'husky', 'sheltie', 'flamingo'],
+    Eggs: ['shark', 'rainbowFish', 'clownFish', 'yellowBird', 'greenBird', 'flamingo']
+} 
+
+function ifYes() {
+    return document.getElementById('yes').play()
+};
+function ifNo() {
+    return document.getElementById('no').play()
+};
+
+$('.column1').on('click', (event) => {
+    for ( let key in animalsObj ) {
+        console.log(event.target.id)
+        if ( event.target.id === key) {
+            for ( let i = 0; i < animalsObj[key].length; i++ ) {
+                if (solution === animalsObj[key][i]) {
+                    console.log(solution, animalsObj[key][i])
+                    console.log('Yes! your animal exists!')
+                    return ifYes();
+                }
+            } 
+        } else {
+            console.log(' No! your animal does not exist!')
+            return ifNo();
+        }
+    } 
+});
+
+$('.column2').on('click', (event) => {
+    for ( let key in animalsObj ) {
+        console.log(event.target.id)
+        if ( event.target.id === key) {
+            for ( let i = 0; i < animalsObj[key].length; i++ ) {
+                if (solution === animalsObj[key][i]) {
+                    console.log(solution, animalsObj[key][i])
+                    console.log('Yes! your animal exists!')
+                    return ifYes();
+                }
+            } 
+        } else {
+            console.log(' No! your animal does not exist!')
+            return ifNo();
+        }
+    } 
+});
+
+function reload() {
+    window.location.reload();
+}
 
 function playAudio1(){
     a.play()
@@ -84,20 +150,24 @@ var answers = ['dalmation', 'yellowBird', 'sheltie', 'shark', 'rainbowFish', 'pa
 var solution = answers[Math.floor(Math.random() * answers.length)];
     console.log(solution);
 
-var floppyEar = ['dalmation', 'sheltie'];
-var livesInWater = ['shark', 'rainbowFish', 'clownFish'];
-var hasScales = ['rainbowFish'];
-var hasTeeth = ['shark', 'panther'];
-var hasFins = ['shark', 'rainbowFish', 'clownFish'];
-var flies = ['yellowBird', 'greenBird', 'flamingo'];
-var longTail = ['dalmation', 'panther', 'lion', 'leopard', 'husky'];
-var furry = ['dalmation', 'panther', 'lion', 'leopard', 'husky', 'sheltie'];
-var longBeak = ['greenBird', 'flamingo'];
-var twoLegs = ['yellowBird', 'greenBird', 'flamingo'];
-var hasFeathers = ['yellowBird', 'greenBird', 'flamingo'];
-var hasSpots = ['dalmation', 'leopard'];
-var hasNose = ['dalmation', 'panther', 'lion', 'leopard', 'husky', 'sheltie', 'flamingo'];
-var laysEggs = ['shark', 'rainbowFish', 'clownFish', 'yellowBird', 'greenBird', 'flamingo'];
+
+   
+// var floppyEar = ['dalmation', 'sheltie'];
+// var livesInWater = ['shark', 'rainbowFish', 'clownFish'];
+// var hasScales = ['rainbowFish'];
+// var hasTeeth = ['shark', 'panther'];
+// var hasFins = ['shark', 'rainbowFish', 'clownFish'];
+// var flies = ['yellowBird', 'greenBird', 'flamingo'];
+// var longTail = ['dalmation', 'panther', 'lion', 'leopard', 'husky'];
+// var furry = ['dalmation', 'panther', 'lion', 'leopard', 'husky', 'sheltie'];
+// var longBeak = ['greenBird', 'flamingo'];
+// var twoLegs = ['yellowBird', 'greenBird', 'flamingo'];
+// var hasFeathers = ['yellowBird', 'greenBird', 'flamingo'];
+// var hasSpots = ['dalmation', 'leopard'];
+// var hasNose = ['dalmation', 'panther', 'lion', 'leopard', 'husky', 'sheltie', 'flamingo'];
+// var laysEggs = ['shark', 'rainbowFish', 'clownFish', 'yellowBird', 'greenBird', 'flamingo'];
+
+
 
 
     //fadeout and yes/no audio
@@ -301,3 +371,6 @@ animal12.onclick = function() {
         return (document.getElementById('notIt').play());
       }
 }
+
+
+  

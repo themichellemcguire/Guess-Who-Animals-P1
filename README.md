@@ -15,3 +15,26 @@
 </p>
 <p>Once the computer has answered, the player will select animal images that they don't want to keep in order to narrow down their selections as to the secret animal. Those selections will be "turned over" after the player clicks on them. At this point, the player will select an additional attribute, until they are left with only one image. If that image is the same as the computer's secret image, the player wins and they'll hear, "Hooray! You won!" If the player is incorrect, the player will hear, "Sorry, you didn't guess my secret animal." The secret image will then appear on the screen.
 </p>
+*Pseudocode*
+<p>// if the animal.id = solution then say YES YOU ARE RIGHT! ELSE SAY WRONG! 
+
+
+
+
+// make descriptions for each animal for the computer to be able to compare with the clue that is selected by 
+// the player
+
+// set up random computer animal selection
+
+// create hover events for clue selections with audio that describes the Image
+
+// create click events for the clues that are selected 
+
+// computer will respond with a yes/no answer if the secret animal has the selected clues
+
+// create click events to "hide" the animal images that are selected
+
+// once one animal image is remaining, computer will compare with secret animal. 
+
+// If same, computer will congratulate winner. If not, computer will "show" correct image and tell player to play again.
+</p>
