@@ -72,6 +72,13 @@ function playAudio14(){
 
 /*----- functions -----*/
 
+var answers = ['dalmation', 'yellowBird', 'sheltie', 'shark', 'rainbowFish', 'panther',
+    'lion', 'leopard', 'husky', 'greenBird', 'flamingo', 'clownFish'];
+
+    //secret animal = solution 
+var solution = answers[Math.floor(Math.random() * answers.length)];
+    console.log(solution);
+
 var floppyEar = ['dalmation', 'sheltie'];
 var livesInWater = ['shark', 'rainbowFish', 'clownFish'];
 var hasScales = ['rainbowFish'];
@@ -88,12 +95,25 @@ var hasNose = ['dalmation', 'panther', 'lion', 'leopard', 'husky', 'sheltie', 'f
 var laysEggs = ['shark', 'rainbowFish', 'clownFish', 'yellowBird', 'greenBird', 'flamingo'];
 
 
-var answers = ['dalmation', 'yellowBird', 'sheltie', 'shark', 'rainbowFish', 'panther',
-    'lion', 'leopard', 'husky', 'greenBird', 'flamingo', 'clownFish'];
 
-    //secret animal = solution 
-var solution = answers[Math.floor(Math.random() * answers.length)];
-    console.log(solution);
+
+
+// let clue1 = document.getSelection('floppyEar');
+//     clue1.onclick = function() {
+//         if (clue1.floppyEar == solution) {
+//         console.log("yes");
+//     } else {
+//       console.log("bummer");
+//     }
+// };
+// let animal1 = document.getElementById('dalmation');
+// animal1.onclick = function() {
+//     if (animal1.id == solution) {
+//         return (document.getElementById('win').play());
+//       } else {
+//         console.log("bummer");
+//       }
+// };
 
     // if (answers[''] == floppyEar[0]) {
     //     for (s = 1; s < floppyEar.length; s++) {
@@ -119,7 +139,7 @@ var solution = answers[Math.floor(Math.random() * answers.length)];
 
 //1. Finish up being able to fade out all animals on click
 //2. Add sounds to where you need to add the sounds 
-//3. Compare the clues to the solution variable 
+//3. Compare the solution variable to the clues
 //4. Then after all animals have been faded out, announce bummer or hooray 
 
 
